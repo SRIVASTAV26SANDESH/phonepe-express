@@ -51,4 +51,4 @@ Route Parameter:
 merchantTransactionId – Unique transaction ID provided at initiation
 
 Example:
-http://localhost:3002/payment/validate/txn_123456789
+http://localhost:3003/payment/validate/txn_123456789
