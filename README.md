@@ -32,7 +32,7 @@ Run the server
 // npm start
 
 Open in your browser
-// http://localhost:3002/pay?amount=300
+// http://localhost:3003/pay?amount=300
 
 📡 API Endpoints
 1. GET /pay
@@ -42,7 +42,7 @@ Query Parameter:
 amount – Amount to be paid (in INR)
 
 Example:
-http://localhost:3002/pay?amount=500
+http://localhost:3003/pay?amount=500
 
 2. GET /payment/validate/:merchantTransactionId
 Validates the payment using merchantTransactionId.
