@@ -1,52 +1,54 @@
-# Node.js Express PhonePe Payment Gateway Integration
+📱 Node.js Express PhonePe Payment Gateway Integration
+This repository demonstrates how to integrate the PhonePe Payment Gateway into a Node.js + Express backend application. It supports initiating payments and validating payment status for User Acceptance Testing (UAT).
 
-Welcome to the Node.js Express PhonePe Payment Gateway Integration repository! This project demonstrates the seamless integration of the PhonePe payment gateway into a Node.js and Express application. Follow the comprehensive guide below to set up the payment gateway for User Acceptance Testing (UAT).
+🚀 Features
+Initiate Payment – Seamlessly initiate a payment and redirect users to the PhonePe payment flow.
 
-## Features
+Validate Payment – Check transaction status using merchantTransactionId.
 
-/pay API: Initiate payments and redirect users to the PhonePe payment flow.
-/payment/validate/:merchantTransactionId API: Validate payment status using merchantTransactionId.
+🧪 UAT Testing Credentials
+Use the following dummy card details for testing in the UAT environment:
 
-## UAT Testing Credentials
+Card Number: 4242 4242 4242 4242
 
-For testing purposes in the UAT environment, use the following credentials:
+Expiry Month: 12
 
-Card number: `4242424242424242`
-Expiry month: `12`
-Expiry year: `44`
-CVV: `936`
-OTP: `123456`
+Expiry Year: 44
 
-## How to Run
+CVV: 936
 
-Clone the project:
-`git clone 
+OTP: 123456
 
-Install dependencies:
-`npm install`
+⚠️ These are test credentials only and will not process real payments.
 
-Run the app:
-`npm run start`
+🛠 How to Run Locally
+Clone the repository
+// git clone https://github.com/SRIVASTAV26SANDESH/phonepe-express.git
 
-Open in your browser:
-`http://localhost:3002/pay?amount=300`
+Install dependencies
+// npm install
 
+Run the server
+// npm start
 
-## API Endpoints
-**/pay API**: Initiate payments.
-Method: GET
-Endpoint: /pay
-Parameters: amount (query parameter)
+Open in your browser
+// http://localhost:3002/pay?amount=300
 
-**/payment/validate** API: Validate payment status.
-Method: GET
-Endpoint: /payment/validate/:merchantTransactionId
+📡 API Endpoints
+1. GET /pay
+Initiates the payment process.
 
+Query Parameter:
+amount – Amount to be paid (in INR)
 
-## Contact Information
-For any inquiries, collaborations, or development work, feel free to reach out:
+Example:
+http://localhost:3002/pay?amount=500
 
-LinkedIn: `https://www.linkedin.com/in/sandesh-srivastav-750a652b8/`
-GitHub: `https://github.com/srivastav26sandesh`
+2. GET /payment/validate/:merchantTransactionId
+Validates the payment using merchantTransactionId.
 
-Happy coding!
+Route Parameter:
+merchantTransactionId – Unique transaction ID provided at initiation
+
+Example:
+http://localhost:3002/payment/validate/txn_123456789
